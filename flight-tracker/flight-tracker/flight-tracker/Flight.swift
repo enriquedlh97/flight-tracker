@@ -56,7 +56,7 @@ struct Flight: Identifiable, Codable {
         case id
         case aircraft_iata
         case aircraft_icao
-        case aircraft_icao2
+        case aircraft_icao24
         case aircraft_registration
         case airline_iata
         case airline_icao
