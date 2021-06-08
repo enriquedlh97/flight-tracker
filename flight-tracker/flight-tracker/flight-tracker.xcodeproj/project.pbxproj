@@ -18,6 +18,8 @@
 		5357586126701EF800524FEB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5357586026701EF800524FEB /* FirebaseAuth */; };
 		5357586326701EF800524FEB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5357586226701EF800524FEB /* FirebaseFirestore */; };
 		5357586526701EF800524FEB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5357586426701EF800524FEB /* FirebaseDatabase */; };
+		535758692670255D00524FEB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 535758682670255D00524FEB /* Alamofire */; };
+		5357586D2670258C00524FEB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 5357586C2670258C00524FEB /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5357586526701EF800524FEB /* FirebaseDatabase in Frameworks */,
+				535758692670255D00524FEB /* Alamofire in Frameworks */,
+				5357586D2670258C00524FEB /* SwiftyJSON in Frameworks */,
 				5357585B26701EF800524FEB /* FirebaseStorageSwift-Beta in Frameworks */,
 				5357585D26701EF800524FEB /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				5357585F26701EF800524FEB /* FirebaseStorage in Frameworks */,
@@ -107,6 +111,8 @@
 				5357586026701EF800524FEB /* FirebaseAuth */,
 				5357586226701EF800524FEB /* FirebaseFirestore */,
 				5357586426701EF800524FEB /* FirebaseDatabase */,
+				535758682670255D00524FEB /* Alamofire */,
+				5357586C2670258C00524FEB /* SwiftyJSON */,
 			);
 			productName = "flight-tracker";
 			productReference = 53575843267019AA00524FEB /* flight-tracker.app */;
@@ -137,6 +143,8 @@
 			mainGroup = 5357583A267019AA00524FEB;
 			packageReferences = (
 				5357585926701EF800524FEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				535758672670255D00524FEB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5357586B2670258C00524FEB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 53575844267019AA00524FEB /* Products */;
 			projectDirPath = "";
@@ -365,6 +373,22 @@
 				minimumVersion = 8.1.0;
 			};
 		};
+		535758672670255D00524FEB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		5357586B2670258C00524FEB /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -397,6 +421,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5357585926701EF800524FEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		535758682670255D00524FEB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 535758672670255D00524FEB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5357586C2670258C00524FEB /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5357586B2670258C00524FEB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
