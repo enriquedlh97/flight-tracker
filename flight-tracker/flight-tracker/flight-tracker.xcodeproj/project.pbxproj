@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53231F5526716E2800360437 /* Airline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53231F5426716E2800360437 /* Airline.swift */; };
 		53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575846267019AA00524FEB /* flight_trackerApp.swift */; };
 		53575849267019AA00524FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575848267019AA00524FEB /* ContentView.swift */; };
 		5357584B267019AB00524FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5357584A267019AB00524FEB /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53231F5426716E2800360437 /* Airline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airline.swift; sourceTree = "<group>"; };
 		53575843267019AA00524FEB /* flight-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flight-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53575846267019AA00524FEB /* flight_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flight_trackerApp.swift; sourceTree = "<group>"; };
 		53575848267019AA00524FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				53575846267019AA00524FEB /* flight_trackerApp.swift */,
 				5357586F26702A8600524FEB /* Flight.swift */,
+				53231F5426716E2800360437 /* Airline.swift */,
 				53575848267019AA00524FEB /* ContentView.swift */,
 				5357584A267019AB00524FEB /* Assets.xcassets */,
 				5357585626701C3000524FEB /* GoogleService-Info.plist */,
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53231F5526716E2800360437 /* Airline.swift in Sources */,
 				5357587026702A8600524FEB /* Flight.swift in Sources */,
 				53575849267019AA00524FEB /* ContentView.swift in Sources */,
 				53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */,
