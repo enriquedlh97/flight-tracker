@@ -13,7 +13,7 @@ struct MyFlightsView: View {
     
     var body: some View {
         List(flights.flights) { flight in
-            Text("\(flight.airline_iata)\(flight.flight_number)")
+            Text("\(flight.airline_iata)-\(flight.flight_number)")
         }
     }
 }
