@@ -22,7 +22,7 @@ struct MyFlightsView: View {
                 // For adding the title
                 ToolbarItem(placement: .principal) {
                     Text("MyFlights")
-                        .font(.title)
+                        .modifier(Title())
                         .foregroundColor("SwanWhite")
                 }
             }
