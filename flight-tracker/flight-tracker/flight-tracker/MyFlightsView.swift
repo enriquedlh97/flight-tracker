@@ -16,6 +16,16 @@ struct MyFlightsView: View {
             List(flights.flights) { flight in
                 Text("\(flight.airline_iata)-\(flight.flight_number)")
             }
+            .navigationBarTitle("MyFlights", displayMode: .inline)
+            .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
+            .toolbar {
+                // For adding the title
+                ToolbarItem(placement: .principal) {
+                    Text("MyFlights")
+                        .font(.title)
+                        .foregroundColor("SwanWhite")
+                }
+            }
         }
     }
 }
