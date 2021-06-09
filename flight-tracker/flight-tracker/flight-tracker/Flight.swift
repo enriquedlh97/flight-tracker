@@ -11,45 +11,45 @@ import FirebaseFirestoreSwift
 struct Flight: Identifiable, Codable {
     
     @DocumentID var id: String? // Uses firebase to generate an id autoamtically
-    var aircraft_iata: String
-    var aircraft_icao: String
-    var aircraft_icao24: String
-    var aircraft_registration: String
-    var airline_iata: String
-    var airline_icao: String
-    var airline_name: String
-    var arrival_airport: String
-    var arrival_baggage: String
-    var arrival_delay: Float
-    var arrival_estimated: Date
-    var arrival_gate: String
-    var arrival_iata: String
-    var arrival_icao: String
-    var arrival_scheduled: Date
-    var arrival_terminal: String
-    var arrival_timezone: String
-    var departure_airport: String
-    var departure_delay: Float
-    var departure_estimated: Date
-    var departure_gate: String
-    var departure_iata: String
-    var departure_icao: String
-    var departure_scheduled: Date
-    var departure_terminal: String
-    var departure_timezone: String
-    var flight_date: String
-    var flight_iata: String
-    var flight_icao: String
-    var flight_number: String
-    var flight_status: String
-    var live_altitude: Float
-    var live_direction: Float
-    var live_is_ground: Bool
-    var live_latitude: Float
-    var live_longitude: Float
-    var live_speed_horizontal: Float
-    var live_speed_vertical: Float
-    var live_updated: Date
+    var aircraft_iata: String // IATA code of the aircraft. Example: A321
+    var aircraft_icao: String // ICAO code of the aircraft. Example: A321
+    var aircraft_icao24: String // ICAO24 code of the aircraft. Example: A0F1BB
+    var aircraft_registration: String // the registration number of the aircraft. Example: N160AN
+    var airline_iata: String // IATA code of the airline. Example: AA
+    var airline_icao: String // ICAO code of the airline. Example: AAL
+    var airline_name: String // name of the airline. Example: American Airlines
+    var arrival_airport: String // name of the arrival airport.
+    var arrival_baggage: String // the baggage claim gate at the arrival airport.
+    var arrival_delay: Float // the delay in arrival in minutes.
+    var arrival_estimated: Date // the actual arrival date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
+    var arrival_gate: String // the arrival gate.
+    var arrival_iata: String // the IATA code of the arrival location/airport.
+    var arrival_icao: String // the ICAO code of the arrival location/airport.
+    var arrival_scheduled: Date // the scheduled arrival date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
+    var arrival_terminal: String // the arrival terminal.
+    var arrival_timezone: String // the arrival timezone. Example: America/Los_Angeles
+    var departure_airport: String // the name of the departure airport.
+    var departure_delay: Float // the delay in departure in minutes.
+    var departure_estimated: Date // the estimated departure date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
+    var departure_gate: String // the departure gate.
+    var departure_iata: String // the IATA code of the departure location/airport.
+    var departure_icao: String // the ICAO code of the departure location/airport.
+    var departure_scheduled: Date // the scheduled departure date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
+    var departure_terminal: String // the departure terminal.
+    var departure_timezone: String // the departure timezone. Example: America/Los_Angeles
+    var flight_date: String // the date of the flight. Format: YYYY-MM-DD
+    var flight_iata: String // the IATA number of the flight. Example: AA1004
+    var flight_icao: String // the ICAO number of the flight. Example: AAL1004
+    var flight_number: String // the flight number. Example: 1004
+    var flight_status: String // the flight status. Possible values: scheduled, active, landed, cancelled, incident, diverted
+    var live_altitude: Float // the altitude (in meters) of the aircraft at the given time.
+    var live_direction: Float // the direction (in degrees) of the aircraft at the given time.
+    var live_is_ground: Bool // true or false depending on whether or not the aircraft is on the ground at the given time.
+    var live_latitude: Float // the latitude coordinate associated with the aircraft location.
+    var live_longitude: Float // the longitude coordinate associated with the aircraft location.
+    var live_speed_horizontal: Float // the horizontal speed (in kilometers per hour) of the aircraft at the given time.
+    var live_speed_vertical: Float // the vertical speed (in kilometers per hour) of the aircraft at the given time.
+    var live_updated: Date // the exact date and time the live data was collected in RFC3339 (ISO8601) format.
     
     enum CodingKeys: String, CodingKey {
         
