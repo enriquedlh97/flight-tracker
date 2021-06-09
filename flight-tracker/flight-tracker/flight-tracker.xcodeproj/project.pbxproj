@@ -63,6 +63,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53231F642671857800360437 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		5357583A267019AA00524FEB = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +89,7 @@
 		53575845267019AA00524FEB /* flight-tracker */ = {
 			isa = PBXGroup;
 			children = (
+				53231F642671857800360437 /* Fonts */,
 				53575846267019AA00524FEB /* flight_trackerApp.swift */,
 				5357586F26702A8600524FEB /* Flight.swift */,
 				53231F5A267174B900360437 /* FlightModel.swift */,
