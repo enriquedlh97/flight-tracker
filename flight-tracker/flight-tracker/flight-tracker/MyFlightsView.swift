@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct MyFlightsView: View {
+    
+    @ObservedObject var flights = FlightModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(flights.flights) { flight in
+            Text(flight.flight_number)
+        }
     }
 }
 
