@@ -18,7 +18,7 @@ struct flight_trackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MyFlightsView()
         }
     }
 }

@@ -11,7 +11,7 @@
 		53231F582671714D00360437 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53231F572671714D00360437 /* Airport.swift */; };
 		53231F5B267174B900360437 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53231F5A267174B900360437 /* FlightModel.swift */; };
 		53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575846267019AA00524FEB /* flight_trackerApp.swift */; };
-		53575849267019AA00524FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575848267019AA00524FEB /* ContentView.swift */; };
+		53575849267019AA00524FEB /* MyFlightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575848267019AA00524FEB /* MyFlightsView.swift */; };
 		5357584B267019AB00524FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5357584A267019AB00524FEB /* Assets.xcassets */; };
 		5357584E267019AB00524FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5357584D267019AB00524FEB /* Preview Assets.xcassets */; };
 		5357585726701C3000524FEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5357585626701C3000524FEB /* GoogleService-Info.plist */; };
@@ -32,7 +32,7 @@
 		53231F5A267174B900360437 /* FlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		53575843267019AA00524FEB /* flight-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flight-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53575846267019AA00524FEB /* flight_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flight_trackerApp.swift; sourceTree = "<group>"; };
-		53575848267019AA00524FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		53575848267019AA00524FEB /* MyFlightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlightsView.swift; sourceTree = "<group>"; };
 		5357584A267019AB00524FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5357584D267019AB00524FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5357584F267019AB00524FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 				53231F5A267174B900360437 /* FlightModel.swift */,
 				53231F572671714D00360437 /* Airport.swift */,
 				53231F5426716E2800360437 /* Airline.swift */,
-				53575848267019AA00524FEB /* ContentView.swift */,
+				53575848267019AA00524FEB /* MyFlightsView.swift */,
 				5357584A267019AB00524FEB /* Assets.xcassets */,
 				5357585626701C3000524FEB /* GoogleService-Info.plist */,
 				5357584F267019AB00524FEB /* Info.plist */,
@@ -189,7 +189,7 @@
 				53231F5526716E2800360437 /* Airline.swift in Sources */,
 				5357587026702A8600524FEB /* Flight.swift in Sources */,
 				53231F5B267174B900360437 /* FlightModel.swift in Sources */,
-				53575849267019AA00524FEB /* ContentView.swift in Sources */,
+				53575849267019AA00524FEB /* MyFlightsView.swift in Sources */,
 				53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
