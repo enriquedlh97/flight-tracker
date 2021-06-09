@@ -24,7 +24,7 @@ struct MyFlightsView: View {
                 ToolbarItem(placement: .principal) {
                     Text("MyFlights")
                         .modifier(Title())
-                        .foregroundColor("SwanWhite")
+                        .foregroundColor(Color("SwanWhite"))
                 }
             }
         }
