@@ -16,6 +16,7 @@ struct MyFlightsView: View {
             List(flights.flights) { flight in
                 Text("\(flight.airline_iata)-\(flight.flight_number)")
             }
+            .listStyle(DefaultListStyle())
             .navigationBarTitle("MyFlights", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
             .toolbar {
