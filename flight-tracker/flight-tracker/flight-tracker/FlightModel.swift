@@ -37,4 +37,15 @@ class FlightModel: ObservableObject {
         
     }
     
+    func addData(flight: Flight) {
+        
+        do {
+            let _ = try db.collection("flights").addDocument(from: flight)
+        }
+        catch {
+            print(error)
+        }
+        
+    }
+    
 }
