@@ -20,6 +20,7 @@ class FlightModel: ObservableObject {
         
     }
     
+    // Function for getting data from the database
     func fetchData() {
         
         db.collection("flights").order(by: "departure_scheduled").addSnapshotListener { (querySnapshot, error) in
@@ -37,6 +38,7 @@ class FlightModel: ObservableObject {
         
     }
     
+    // Fucntion for adding data to the database
     func addData(flight: Flight) {
         
         do {
@@ -44,6 +46,33 @@ class FlightModel: ObservableObject {
         }
         catch {
             print(error)
+        }
+        
+    }
+    
+    // Funciton for updating data from the database
+    func updateData(flight: Flight) {
+        
+        if let flightID = flight.id {
+            do {
+                try db.collection("flights").document(flightID).setData(from: flight)
+            }
+            catch {
+                print("There was an error while trying to update a flight \(error.localizedDescription).")
+            }
+        }
+        
+    }
+    
+    // Function for removing data from the DataBase
+    func removeData(flight: Flight) {
+        
+        if let flightID = flight.id {
+            db.collection("flights").document(flightID).delete { (error) in
+                if let error = error {
+                    print("Error removing flight: \(error.localizedDescription)")
+                }
+            }
         }
         
     }
