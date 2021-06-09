@@ -11,7 +11,7 @@ struct Title: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("Baloo2-bold", size: 24))
-            .foregroundColor(Color("Swanwhite"))
+            .foregroundColor(Color("SwanWhite"))
     }
 }
 
@@ -19,7 +19,7 @@ struct Subtitle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("Baloo2-Bold", size: 20))
-            .foregroundColor(Color("ElectronBlue"))
+            .foregroundColor(Color("SwanWhite"))
     }
 }
 
