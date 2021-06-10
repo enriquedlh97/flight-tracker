@@ -69,6 +69,8 @@ class DataModel: ObservableObject {
                                 live_speed_horizontal: f.1["live"]["speed_horizontal"].floatValue,
                                 live_speed_vertical: f.1["live"]["speed_vertical"].floatValue,
                                 live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue)!)
+                
+                self.flights.append(flight)
 
             }
         }
