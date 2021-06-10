@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyFlightsView: View {
+struct MyTripView: View {
     
     @ObservedObject var flights = FlightModel()
     
@@ -18,6 +18,6 @@ struct MyFlightsView: View {
 
 struct MyFlightsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyFlightsView()
+        MyTripView()
     }
 }

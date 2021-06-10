@@ -14,7 +14,7 @@
 		53231F62267181B300360437 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53231F61267181B300360437 /* Modifiers.swift */; };
 		53231F68267187F300360437 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53231F67267187F300360437 /* Colors.xcassets */; };
 		53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575846267019AA00524FEB /* flight_trackerApp.swift */; };
-		53575849267019AA00524FEB /* MyFlightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575848267019AA00524FEB /* MyFlightsView.swift */; };
+		53575849267019AA00524FEB /* MyTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53575848267019AA00524FEB /* MyTripView.swift */; };
 		5357584B267019AB00524FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5357584A267019AB00524FEB /* Assets.xcassets */; };
 		5357584E267019AB00524FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5357584D267019AB00524FEB /* Preview Assets.xcassets */; };
 		5357585726701C3000524FEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5357585626701C3000524FEB /* GoogleService-Info.plist */; };
@@ -44,7 +44,7 @@
 		53231F67267187F300360437 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		53575843267019AA00524FEB /* flight-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flight-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53575846267019AA00524FEB /* flight_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flight_trackerApp.swift; sourceTree = "<group>"; };
-		53575848267019AA00524FEB /* MyFlightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlightsView.swift; sourceTree = "<group>"; };
+		53575848267019AA00524FEB /* MyTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripView.swift; sourceTree = "<group>"; };
 		5357584A267019AB00524FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5357584D267019AB00524FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5357584F267019AB00524FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 				53231F5A267174B900360437 /* FlightModel.swift */,
 				53231F572671714D00360437 /* Airport.swift */,
 				53231F5426716E2800360437 /* Airline.swift */,
-				53575848267019AA00524FEB /* MyFlightsView.swift */,
+				53575848267019AA00524FEB /* MyTripView.swift */,
 				53FD333426727219004C6B3B /* FlightListView.swift */,
 				53E3E2612672BB1E0016E4D7 /* HomeView.swift */,
 				53E3E25E2672B4970016E4D7 /* FlightCellView.swift */,
@@ -231,7 +231,7 @@
 				53FD333226726D92004C6B3B /* extensions.swift in Sources */,
 				53231F5B267174B900360437 /* FlightModel.swift in Sources */,
 				53FD333526727219004C6B3B /* FlightListView.swift in Sources */,
-				53575849267019AA00524FEB /* MyFlightsView.swift in Sources */,
+				53575849267019AA00524FEB /* MyTripView.swift in Sources */,
 				53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */,
 				53E3E25F2672B4970016E4D7 /* FlightCellView.swift in Sources */,
 				53FD332F267269C4004C6B3B /* DataModel.swift in Sources */,
