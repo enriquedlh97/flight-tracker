@@ -40,7 +40,7 @@ class DataModel: ObservableObject {
                                 arrival_airport: f.1["arrival"]["airport"].stringValue,
                                 arrival_baggage: f.1["arrival"]["baggage"].stringValue,
                                 arrival_delay: f.1["arrival"]["delay"].floatValue,
-                                arrival_estimated: <#T##Date#>,
+                                arrival_estimated: ISO8601DateFormatter().date(from: f.1["arrival"]["delay"].stringValue)!,
                                 arrival_gate: <#T##String#>,
                                 arrival_iata: <#T##String#>,
                                 arrival_icao: <#T##String#>,
