@@ -20,8 +20,19 @@ struct FlightDetailView: View {
                 Text("To: \(flight.arrival_airport)")
             }
         }
+        .navigationBarTitle("Flight \(flight.airline_iata)-\(flight.flight_number)", displayMode: .inline)
+        .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
+        .toolbar {
+            // For adding the title
+            ToolbarItem(placement: .principal) {
+                Text("Flight \(flight.airline_iata)-\(flight.flight_number)")
+                    .modifier(Title())
+                    .foregroundColor(Color("SwanWhite"))
+            }
+        }
     }
-}
+    }
+
 
 struct FlightDetailView_Previews: PreviewProvider {
     static var previews: some View {
