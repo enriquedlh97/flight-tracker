@@ -15,7 +15,7 @@ struct FlightDetailView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("\(flight.airline_iata)-\(flight.flight_number)")
+                Text("Flight: \(flight.airline_iata)-\(flight.flight_number)")
                 Text("From: \(flight.departure_airport)")
                 Text("To: \(flight.arrival_airport)")
             }
