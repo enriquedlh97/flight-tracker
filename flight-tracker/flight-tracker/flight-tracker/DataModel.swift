@@ -30,7 +30,8 @@ class DataModel: ObservableObject {
                 //print(f.1["flight_date"])
                 //print(f.1["arrival"]["airport"])
                 
-                flight = Flight(aircraft_iata: f.1["aircraft"]["iata"].stringValue,
+                flight = Flight(id: UUID().uuidString,
+                                aircraft_iata: f.1["aircraft"]["iata"].stringValue,
                                 aircraft_icao: f.1["aircraft"]["icao"].stringValue,
                                 aircraft_icao24: f.1["aircraft"]["icao24"].stringValue,
                                 aircraft_registration: f.1["aircraft"]["registration"].stringValue,
@@ -74,9 +75,9 @@ class DataModel: ObservableObject {
                 //print("\(flight.airline_iata)-\(flight.flight_number)")
                 
             }
-            //            self.flightsList.forEach { flight in
-            //                print("\(flight.airline_iata)-\(flight.flight_number)")
-            //            }
+//                        self.flightsList.forEach { flight in
+//                            print("\(flight.airline_iata)-\(flight.flight_number)")
+//                        }
         }
         
     }
