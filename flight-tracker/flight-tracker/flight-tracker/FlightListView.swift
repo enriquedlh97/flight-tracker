@@ -12,9 +12,12 @@ struct FlightListView: View {
     @StateObject var data = DataModel()
     
     var body: some View {
+        
         NavigationView {
-            List(data.flightsList) { flight in
-                Text("\(flight.airline_iata)-\(flight.flight_number)")
+            VStack {
+                List(data.flightsList) { flight in
+                    Text("\(flight.airline_iata)-\(flight.flight_number)")
+                }
             }
             .listStyle(DefaultListStyle())
             .navigationBarTitle("MyFlights", displayMode: .inline)
