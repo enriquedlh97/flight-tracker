@@ -18,6 +18,7 @@ struct FlightDetailView: View {
                 Text("Flight: \(flight.airline_iata)-\(flight.flight_number)")
                 Text("From: \(flight.departure_airport)")
                 Text("To: \(flight.arrival_airport)")
+                Text("Departure: \(flight.departure_scheduled)")
             }
         }
         .navigationBarTitle("Flight \(flight.airline_iata)-\(flight.flight_number)", displayMode: .inline)
