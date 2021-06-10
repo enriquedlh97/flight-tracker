@@ -80,5 +80,7 @@ class DataModel: ObservableObject {
         }
         
     }
-    
+                self.flightsList.forEach { flight in
+                    print("\(flight.airline_iata)-\(flight.flight_number)")
+                }
 }
