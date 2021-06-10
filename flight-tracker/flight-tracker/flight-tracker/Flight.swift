@@ -21,7 +21,7 @@ struct Flight: Identifiable, Codable {
     var arrival_airport: String // name of the arrival airport.
     var arrival_baggage: String // the baggage claim gate at the arrival airport.
     var arrival_delay: Float // the delay in arrival in minutes.
-    var arrival_estimated: Date // the actual arrival date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
+    var arrival_estimated: Date? // the actual arrival date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
     var arrival_gate: String // the arrival gate.
     var arrival_iata: String // the IATA code of the arrival location/airport.
     var arrival_icao: String // the ICAO code of the arrival location/airport.
@@ -30,7 +30,7 @@ struct Flight: Identifiable, Codable {
     var arrival_timezone: String // the arrival timezone. Example: America/Los_Angeles
     var departure_airport: String // the name of the departure airport.
     var departure_delay: Float // the delay in departure in minutes.
-    var departure_estimated: Date // the estimated departure date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
+    var departure_estimated: Date? // the estimated departure date and time in RFC3339 (ISO8601) format. Example: 2019-12-12T04:20:00+00:00
     var departure_gate: String // the departure gate.
     var departure_iata: String // the IATA code of the departure location/airport.
     var departure_icao: String // the ICAO code of the departure location/airport.
