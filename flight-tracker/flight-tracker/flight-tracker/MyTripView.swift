@@ -12,7 +12,24 @@ struct MyTripView: View {
     @ObservedObject var flights = FlightModel()
     
     var body: some View {
-        Text("Hola")
+        NavigationView {
+            VStack {
+                HStack {
+                    Text("Visited Airports")
+                    Text("Marked Airlines ")
+                }
+            }
+            .navigationBarTitle("MyTrip", displayMode: .inline)
+            .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
+            .toolbar {
+                // For adding the title
+                ToolbarItem(placement: .principal) {
+                    Text("MyTrip")
+                        .modifier(Title())
+                        .foregroundColor(Color("SwanWhite"))
+                }
+            }
+        }
     }
 }
 
