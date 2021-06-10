@@ -14,10 +14,10 @@ class DataModel: ObservableObject {
     @Published var flight = [Flight]()
     
     init() {
-        getFlight()
+        getFlights()
     }
     
-    func getFlight() {
+    func getFlights() {
         
         let URL = "http://api.aviationstack.com/v1/flights?access_key=\(apikey)"
         
