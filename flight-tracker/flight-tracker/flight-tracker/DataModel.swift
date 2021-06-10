@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class DataModel: ObservableObject {
     
-    @Published var flight: Flight
+    @Published var flight = [Flight]()
     
     init() {
         getFlight()
@@ -19,7 +19,13 @@ class DataModel: ObservableObject {
     
     func getFlight() {
         
-        let URL = "https://api.aviationstack.com/v1/flights?access_key=\(apikey)"
+        let URL = "http://api.aviationstack.com/v1/flights?access_key=\(apikey)"
+        
+        AF.request(URL, method: .get, encoding: URLEncoding.default).responseData { data in
+            
+            let json = try! JSON(data: data.data!)
+            print(json.count)
+        }
         
     }
     
