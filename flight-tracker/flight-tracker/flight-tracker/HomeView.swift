@@ -15,12 +15,12 @@ struct HomeView: View {
         TabView {
             FlightListView(data: data)
                 .tabItem {
-                    Image("airplane.circle.fill")
+                    Image(systemName: "airplane.circle.fill")
                     Text("Flights")
                 }
             MyFlightsView()
                 .tabItem {
-                    Image("point.fill.topleft.down.curvedto.point.fill.bottomright.up")
+                    Image(systemName: "point.fill.topleft.down.curvedto.point.fill.bottomright.up")
                     Text("MyTrip")
                 }
         }
