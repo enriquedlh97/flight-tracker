@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FlightListView: View {    
     
-    @StateObject var data = DataModel()
+    @StateObject var data: DataModel
     
     var body: some View {
         
@@ -38,6 +38,6 @@ struct FlightListView: View {
 
 struct FlightListView_Previews: PreviewProvider {
     static var previews: some View {
-        FlightListView()
+        FlightListView(data: DataModel())
     }
 }
