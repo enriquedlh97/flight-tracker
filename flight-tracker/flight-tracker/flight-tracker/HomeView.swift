@@ -15,9 +15,18 @@ struct HomeView: View {
         TabView {
             FlightListView(data: data)
                 .tabItem {
-                    Label("Flights", systemImage: "airplane.circle.fill")
+                    Image("airplane.circle.fill")
+                    Text("Flights")
                 }
             MyFlightsView()
+                .tabItem {
+                    Image("point.fill.topleft.down.curvedto.point.fill.bottomright.up")
+                    Text("MyTrip")
+                }
+        }
+        .accentColor(Color("Alizarin"))
+        .onAppear {
+            UITabBar.appearance().barTintColor = UIColor(Color("SourLemon"))
         }
     }
 }
