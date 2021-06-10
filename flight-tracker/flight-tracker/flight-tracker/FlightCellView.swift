@@ -14,12 +14,15 @@ struct FlightCellView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Flight: \(flight.airline_iata)-\(flight.flight_number)")
                 VStack {
-                    HStack {
-                        Text("From: \(flight.departure_airport)")
-                        Text("To: \(flight.arrival_airport)")
-                    }
+                Text("Flight: \(flight.airline_iata)-\(flight.flight_number)")
+                    Text("Departure: \(flight.departure_scheduled)")
+                }
+                VStack {
+        
+                    Text("From: \(flight.departure_airport)")
+                    Text("To: \(flight.arrival_airport)")
+                    
                 }
             }
         }
