@@ -15,6 +15,12 @@ struct MyTripView: View {
         NavigationView {
             VStack {
                 HStack {
+                    NavigationLink(
+                        destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                        label: {
+                            /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+                        })
+                    
                     Text("Visited Airports")
                     Text("Marked Airlines ")
                 }
