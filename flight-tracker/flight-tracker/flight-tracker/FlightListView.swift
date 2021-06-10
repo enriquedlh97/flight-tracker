@@ -9,11 +9,11 @@ import SwiftUI
 
 struct FlightListView: View {    
     
-    @StateObject var flights = DataModel()
+    @StateObject var data = DataModel()
     
     var body: some View {
         NavigationView {
-            List(flights.flightsList) { flight in
+            List(data.flightsList) { flight in
                 Text("\(flight.airline_iata)-\(flight.flight_number)")
             }
             .listStyle(DefaultListStyle())
