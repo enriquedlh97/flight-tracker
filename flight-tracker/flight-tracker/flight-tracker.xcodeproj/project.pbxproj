@@ -28,6 +28,7 @@
 		5357586D2670258C00524FEB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 5357586C2670258C00524FEB /* SwiftyJSON */; };
 		5357587026702A8600524FEB /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357586F26702A8600524FEB /* Flight.swift */; };
 		53E3E25C2672B1550016E4D7 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3E25B2672B1550016E4D7 /* FlightDetailView.swift */; };
+		53E3E25F2672B4970016E4D7 /* FlightCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3E25E2672B4970016E4D7 /* FlightCellView.swift */; };
 		53FD332F267269C4004C6B3B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FD332E267269C4004C6B3B /* DataModel.swift */; };
 		53FD333226726D92004C6B3B /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FD333126726D92004C6B3B /* extensions.swift */; };
 		53FD333526727219004C6B3B /* FlightListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FD333426727219004C6B3B /* FlightListView.swift */; };
@@ -49,6 +50,7 @@
 		5357585626701C3000524FEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5357586F26702A8600524FEB /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		53E3E25B2672B1550016E4D7 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
+		53E3E25E2672B4970016E4D7 /* FlightCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCellView.swift; sourceTree = "<group>"; };
 		53FD332E267269C4004C6B3B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		53FD333126726D92004C6B3B /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		53FD333426727219004C6B3B /* FlightListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				53231F5426716E2800360437 /* Airline.swift */,
 				53575848267019AA00524FEB /* MyFlightsView.swift */,
 				53FD333426727219004C6B3B /* FlightListView.swift */,
+				53E3E25E2672B4970016E4D7 /* FlightCellView.swift */,
 				53E3E25B2672B1550016E4D7 /* FlightDetailView.swift */,
 				53FD332E267269C4004C6B3B /* DataModel.swift */,
 				53FD333126726D92004C6B3B /* extensions.swift */,
@@ -226,6 +229,7 @@
 				53FD333526727219004C6B3B /* FlightListView.swift in Sources */,
 				53575849267019AA00524FEB /* MyFlightsView.swift in Sources */,
 				53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */,
+				53E3E25F2672B4970016E4D7 /* FlightCellView.swift in Sources */,
 				53FD332F267269C4004C6B3B /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
