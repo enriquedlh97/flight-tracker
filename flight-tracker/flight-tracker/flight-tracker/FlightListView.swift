@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FlightListView: View {    
     
-    @ObservedObject var flights = DataModel()
+    @StateObject var flights = DataModel()
     
     var body: some View {
         NavigationView {
