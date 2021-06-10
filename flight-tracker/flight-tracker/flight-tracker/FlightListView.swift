@@ -20,7 +20,7 @@ struct FlightListView: View {
                 }
             }
             .listStyle(DefaultListStyle())
-            .padding(.bottom, 20)
+            //.padding(.bottom, 20)
             .navigationBarTitle("Flights", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
             .toolbar {

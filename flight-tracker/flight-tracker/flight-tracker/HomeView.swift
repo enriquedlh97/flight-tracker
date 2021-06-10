@@ -12,22 +12,12 @@ struct HomeView: View {
     @StateObject var data = DataModel()
     
     var body: some View {
-        VStack {
-            
-            //NavigationView {
-                
-                TabView {
-                    
-                    FlightListView(data: data)
-    
+        TabView {
+            FlightListView(data: data)
+                .tabItem {
+                    Label("Flights", systemImage: "airplane.circle.fill")
                 }
-                
-            //}
-            
-        }
-        .accentColor(Color("Alizarin"))
-        .onAppear {
-            UITabBar.appearance().barTintColor = UIColor(Color("SourLemon"))
+            MyFlightsView()
         }
     }
 }
