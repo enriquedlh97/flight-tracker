@@ -20,12 +20,12 @@ struct FlightListView: View {
                 }
             }
             .listStyle(DefaultListStyle())
-            .navigationBarTitle("MyFlights", displayMode: .inline)
+            .navigationBarTitle("Flights", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
             .toolbar {
                 // For adding the title
                 ToolbarItem(placement: .principal) {
-                    Text("MyFlights")
+                    Text("Flights")
                         .modifier(Title())
                         .foregroundColor(Color("SwanWhite"))
                 }
