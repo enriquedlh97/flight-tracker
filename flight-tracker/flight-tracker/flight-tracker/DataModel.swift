@@ -56,19 +56,19 @@ class DataModel: ObservableObject {
                                 departure_scheduled: ISO8601DateFormatter().date(from: f.1["departure"]["scheduled"].stringValue)!,
                                 departure_terminal: f.1["departure"]["terminal"].stringValue,
                                 departure_timezone: f.1["departure"]["timezone"].stringValue,
-                                flight_date: <#T##String#>,
-                                flight_iata: <#T##String#>,
-                                flight_icao: <#T##String#>,
-                                flight_number: <#T##String#>,
-                                flight_status: <#T##String#>,
-                                live_altitude: <#T##Float#>,
-                                live_direction: <#T##Float#>,
-                                live_is_ground: <#T##Bool#>,
-                                live_latitude: <#T##Float#>,
-                                live_longitude: <#T##Float#>,
-                                live_speed_horizontal: <#T##Float#>,
-                                live_speed_vertical: <#T##Float#>,
-                                live_updated: <#T##Date#>)
+                                flight_date: f.1["flight_date"].stringValue,
+                                flight_iata: f.1["flight"]["iata"].stringValue,
+                                flight_icao: f.1["flight"]["icao"].stringValue,
+                                flight_number: f.1["flight"]["number"].stringValue,
+                                flight_status: f.1["flight_status"].stringValue,
+                                live_altitude: f.1["live"]["altitude"].floatValue,
+                                live_direction: f.1["live"]["direction"].floatValue,
+                                live_is_ground: f.1["live"]["altitude"].boolValue,
+                                live_latitude: f.1["live"]["latitude"].floatValue,
+                                live_longitude: f.1["live"]["longitude"].floatValue,
+                                live_speed_horizontal: f.1["live"]["speed_horizontal"].floatValue,
+                                live_speed_vertical: f.1["live"]["speed_vertical"].floatValue,
+                                live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue)!)
 
             }
         }
