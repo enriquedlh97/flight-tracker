@@ -12,22 +12,7 @@ struct MyFlightsView: View {
     @ObservedObject var flights = FlightModel()
     
     var body: some View {
-        NavigationView {
-            List(flights.flights) { flight in
-                Text("\(flight.airline_iata)-\(flight.flight_number)")
-            }
-            .listStyle(DefaultListStyle())
-            .navigationBarTitle("MyFlights", displayMode: .inline)
-            .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
-            .toolbar {
-                // For adding the title
-                ToolbarItem(placement: .principal) {
-                    Text("MyFlights")
-                        .modifier(Title())
-                        .foregroundColor(Color("SwanWhite"))
-                }
-            }
-        }
+        Text("Hola")
     }
 }
 

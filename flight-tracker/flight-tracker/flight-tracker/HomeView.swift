@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             
-            NavigationView {
+            //NavigationView {
                 
                 TabView {
                     
@@ -22,7 +22,7 @@ struct HomeView: View {
     
                 }
                 
-            }
+            //}
             
         }
         .accentColor(Color("Alizarin"))
