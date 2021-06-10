@@ -15,7 +15,7 @@ struct FlightListView: View {
         
         NavigationView {
             VStack {
-                List(data.flightsList) { flight in
+                List(data.flightsList, id: \.flight_number) { flight in
                     Text("\(flight.airline_iata)-\(flight.flight_number)")
                 }
             }

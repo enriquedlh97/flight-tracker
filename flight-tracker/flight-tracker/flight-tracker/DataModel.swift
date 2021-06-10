@@ -30,7 +30,7 @@ class DataModel: ObservableObject {
                 //print(f.1["flight_date"])
                 //print(f.1["arrival"]["airport"])
                 
-                flight = Flight(id: UUID().uuidString,
+                flight = Flight(//id: UUID().uuidString,
                                 aircraft_iata: f.1["aircraft"]["iata"].stringValue,
                                 aircraft_icao: f.1["aircraft"]["icao"].stringValue,
                                 aircraft_icao24: f.1["aircraft"]["icao24"].stringValue,
