@@ -13,7 +13,7 @@ struct FlightListView: View {
     
     var body: some View {
         NavigationView {
-            List(flights.flights) { flight in
+            List(flights.flightsList) { flight in
                 Text("\(flight.airline_iata)-\(flight.flight_number)")
             }
             .listStyle(DefaultListStyle())
