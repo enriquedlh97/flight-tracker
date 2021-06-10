@@ -28,6 +28,7 @@
 		5357586D2670258C00524FEB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 5357586C2670258C00524FEB /* SwiftyJSON */; };
 		5357587026702A8600524FEB /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357586F26702A8600524FEB /* Flight.swift */; };
 		53FD332F267269C4004C6B3B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FD332E267269C4004C6B3B /* DataModel.swift */; };
+		53FD333226726D92004C6B3B /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FD333126726D92004C6B3B /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		5357585626701C3000524FEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5357586F26702A8600524FEB /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		53FD332E267269C4004C6B3B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		53FD333126726D92004C6B3B /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				53231F5426716E2800360437 /* Airline.swift */,
 				53575848267019AA00524FEB /* MyFlightsView.swift */,
 				53FD332E267269C4004C6B3B /* DataModel.swift */,
+				53FD333126726D92004C6B3B /* extensions.swift */,
 				53231F61267181B300360437 /* Modifiers.swift */,
 				53231F5E26717BF100360437 /* NavigationBarModifier.swift */,
 				5357584A267019AB00524FEB /* Assets.xcassets */,
@@ -211,6 +214,7 @@
 				53231F5526716E2800360437 /* Airline.swift in Sources */,
 				5357587026702A8600524FEB /* Flight.swift in Sources */,
 				53231F62267181B300360437 /* Modifiers.swift in Sources */,
+				53FD333226726D92004C6B3B /* extensions.swift in Sources */,
 				53231F5B267174B900360437 /* FlightModel.swift in Sources */,
 				53575849267019AA00524FEB /* MyFlightsView.swift in Sources */,
 				53575847267019AA00524FEB /* flight_trackerApp.swift in Sources */,
