@@ -71,8 +71,11 @@ class DataModel: ObservableObject {
                                 live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue) ?? Date())
                 
                 self.flightsList.append(flight)
-                print("\(flight.airline_iata)-\(flight.flight_number)")
+                //print("\(flight.airline_iata)-\(flight.flight_number)")
 
+            }
+            self.flightsList.forEach { flight in
+                print("\(flight.airline_iata)-\(flight.flight_number)")
             }
         }
         
