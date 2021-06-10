@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class DataModel: ObservableObject {
     
-    @Published var flights = [Flight]()
+    @Published var flightsList = [Flight]()
     
     init() {
         getFlights()
@@ -70,7 +70,7 @@ class DataModel: ObservableObject {
                                 live_speed_vertical: f.1["live"]["speed_vertical"].floatValue,
                                 live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue) ?? Date())
                 
-                self.flights.append(flight)
+                self.flightsList.append(flight)
                 print("\(flight.airline_iata)-\(flight.flight_number)")
 
             }
