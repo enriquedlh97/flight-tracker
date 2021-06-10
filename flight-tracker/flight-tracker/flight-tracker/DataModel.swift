@@ -23,8 +23,9 @@ class DataModel: ObservableObject {
         
         AF.request(URL, method: .get, encoding: URLEncoding.default).responseData { data in
             
-            let json = try! JSON(data: data.data!)
-            print(json.count)
+            print(data)
+            //let json = try! JSON(data: data.data!)
+            //print(json.count)
         }
         
     }
