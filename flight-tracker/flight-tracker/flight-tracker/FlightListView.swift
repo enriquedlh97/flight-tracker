@@ -16,7 +16,7 @@ struct FlightListView: View {
         NavigationView {
             VStack {
                 List(data.flightsList, id: \.flight_number) { flight in
-                    Text("\(flight.airline_iata)-\(flight.flight_number)")
+                    NavigationLink(destination: FlightDetailView(flight: flight, data: data), label: {Text("Flight: \(flight.airline_iata)-\(flight.flight_number)")})
                 }
             }
             .listStyle(DefaultListStyle())
