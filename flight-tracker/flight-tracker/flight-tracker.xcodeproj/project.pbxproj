@@ -29,6 +29,7 @@
 		5357587026702A8600524FEB /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357586F26702A8600524FEB /* Flight.swift */; };
 		53B5EFE72673CF6200F7586A /* AirlinesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5EFE62673CF6200F7586A /* AirlinesListView.swift */; };
 		53B5EFEA2673CFBB00F7586A /* AirportsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B5EFE92673CFBB00F7586A /* AirportsListView.swift */; };
+		53B5EFEE2673D4E800F7586A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53B5EFED2673D4E800F7586A /* Kingfisher */; };
 		53C4CFFD2672E23F002315DD /* MyAirportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4CFFC2672E23F002315DD /* MyAirportsView.swift */; };
 		53C4D0002672E25C002315DD /* MyAirlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4CFFF2672E25C002315DD /* MyAirlinesView.swift */; };
 		53C4D0052672E47B002315DD /* MyAirportsAirlinesBottonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4D0042672E47B002315DD /* MyAirportsAirlinesBottonView.swift */; };
@@ -78,6 +79,7 @@
 				5357586526701EF800524FEB /* FirebaseDatabase in Frameworks */,
 				535758692670255D00524FEB /* Alamofire in Frameworks */,
 				5357586D2670258C00524FEB /* SwiftyJSON in Frameworks */,
+				53B5EFEE2673D4E800F7586A /* Kingfisher in Frameworks */,
 				5357585B26701EF800524FEB /* FirebaseStorageSwift-Beta in Frameworks */,
 				5357585D26701EF800524FEB /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				5357585F26701EF800524FEB /* FirebaseStorage in Frameworks */,
@@ -178,6 +180,7 @@
 				5357586426701EF800524FEB /* FirebaseDatabase */,
 				535758682670255D00524FEB /* Alamofire */,
 				5357586C2670258C00524FEB /* SwiftyJSON */,
+				53B5EFED2673D4E800F7586A /* Kingfisher */,
 			);
 			productName = "flight-tracker";
 			productReference = 53575843267019AA00524FEB /* flight-tracker.app */;
@@ -210,6 +213,7 @@
 				5357585926701EF800524FEB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				535758672670255D00524FEB /* XCRemoteSwiftPackageReference "Alamofire" */,
 				5357586B2670258C00524FEB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				53B5EFEC2673D4E800F7586A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 53575844267019AA00524FEB /* Products */;
 			projectDirPath = "";
@@ -473,6 +477,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		53B5EFEC2673D4E800F7586A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -515,6 +527,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5357586B2670258C00524FEB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		53B5EFED2673D4E800F7586A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53B5EFEC2673D4E800F7586A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
