@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct AirportCellView: View {
+    
+    var airport: Airport
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                VStack {
+                    Text("Name: \(airport.airport_name)")
+                    Text("Country: \(airport.country_name)")
+                }
+                VStack {
+                    
+                    Text("Timezone: \(airport.timezone)")
+                    
+                }
+            }
+        }
     }
 }
 
 struct AirportCellView_Previews: PreviewProvider {
     static var previews: some View {
-        AirportCellView()
+        AirportCellView(airport: Airport.dummy)
     }
 }

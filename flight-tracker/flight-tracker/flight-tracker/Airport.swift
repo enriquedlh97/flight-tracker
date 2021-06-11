@@ -49,8 +49,8 @@ struct Airport: Identifiable, Codable {
 
 extension Airport {
     
-    public static var dummy = [
+    public static var dummy =
         Airport(airport_name: "Anaa", iata_code: "AAA", icao_code: "NTGA", latitude: "-17.05", longitude: "-145.41667", geoname_id: "6947726", timezone: "Pacific/Tahiti", gmt: "-10", phone_number: nil, country_name: "French Polynesia", country_iso2: "PF", city_iata_code: "AAA", flag: "https://disease.sh/assets/img/flags/pf.png")
-    ]
+    
     
 }
