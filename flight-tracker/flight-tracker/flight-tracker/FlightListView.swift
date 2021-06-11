@@ -17,6 +17,7 @@ struct FlightListView: View {
         NavigationView {
             VStack {
                 SearchBarView(text: $text)
+                    .padding(.top, 8)
                 List {
                     Section(
                     header: Text("Live Flights"),
@@ -26,7 +27,7 @@ struct FlightListView: View {
                             }
                         })
                 }
-                .listStyle(DefaultListStyle())
+                .listStyle(PlainListStyle())
 
 //                List(data.flightsList, id: \.flight_number) { flight in
 //                    NavigationLink(destination: FlightDetailView(flight: flight, data: data), label: {FlightCellView(flight: flight)})
