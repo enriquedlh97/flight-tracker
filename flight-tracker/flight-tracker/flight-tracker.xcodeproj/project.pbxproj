@@ -35,6 +35,7 @@
 		53C4D0052672E47B002315DD /* MyAirportsAirlinesBottonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4D0042672E47B002315DD /* MyAirportsAirlinesBottonView.swift */; };
 		53C4D0082672EFD8002315DD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C4D0072672EFD8002315DD /* SearchBarView.swift */; };
 		53DE63832674160E006B884F /* AirportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE63822674160E006B884F /* AirportDetailView.swift */; };
+		53DE638626741DA3006B884F /* AirlineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE638526741DA3006B884F /* AirlineModel.swift */; };
 		53E3E25C2672B1550016E4D7 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3E25B2672B1550016E4D7 /* FlightDetailView.swift */; };
 		53E3E25F2672B4970016E4D7 /* FlightCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3E25E2672B4970016E4D7 /* FlightCellView.swift */; };
 		53E3E2622672BB1E0016E4D7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3E2612672BB1E0016E4D7 /* HomeView.swift */; };
@@ -67,6 +68,7 @@
 		53C4D0042672E47B002315DD /* MyAirportsAirlinesBottonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAirportsAirlinesBottonView.swift; sourceTree = "<group>"; };
 		53C4D0072672EFD8002315DD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		53DE63822674160E006B884F /* AirportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailView.swift; sourceTree = "<group>"; };
+		53DE638526741DA3006B884F /* AirlineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineModel.swift; sourceTree = "<group>"; };
 		53E3E25B2672B1550016E4D7 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
 		53E3E25E2672B4970016E4D7 /* FlightCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCellView.swift; sourceTree = "<group>"; };
 		53E3E2612672BB1E0016E4D7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				5357586F26702A8600524FEB /* Flight.swift */,
 				53231F5A267174B900360437 /* FlightModel.swift */,
 				53EB82132673FF4E0064033B /* AirportModel.swift */,
+				53DE638526741DA3006B884F /* AirlineModel.swift */,
 				53231F572671714D00360437 /* Airport.swift */,
 				53231F5426716E2800360437 /* Airline.swift */,
 				53575848267019AA00524FEB /* MyTripView.swift */,
@@ -262,6 +265,7 @@
 				53231F62267181B300360437 /* Modifiers.swift in Sources */,
 				53DE63832674160E006B884F /* AirportDetailView.swift in Sources */,
 				53E3E25C2672B1550016E4D7 /* FlightDetailView.swift in Sources */,
+				53DE638626741DA3006B884F /* AirlineModel.swift in Sources */,
 				53FD333226726D92004C6B3B /* extensions.swift in Sources */,
 				53C4D0002672E25C002315DD /* MyAirlinesView.swift in Sources */,
 				53C4D0082672EFD8002315DD /* SearchBarView.swift in Sources */,
