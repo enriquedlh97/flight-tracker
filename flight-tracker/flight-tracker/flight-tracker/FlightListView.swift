@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FlightListView: View {    
     
+    @StateObject var flights: FlightModel
     @StateObject var data: DataModel
     @State var text = ""
     
@@ -23,7 +24,7 @@ struct FlightListView: View {
                     header: Text("Live Flights"),
                         content: {
                             ForEach(data.flightsList.filter {$0.airline_name.contains(text) || $0.aircraft_iata.contains(text) || $0.aircraft_icao.contains(text) || $0.flight_number.contains(text) || $0.departure_airport.contains(text) || $0.airline_iata.contains(text) || $0.airline_icao.contains(text) || "\($0.airline_iata)-\($0.flight_number)".contains(text) || text.isEmpty}, id: \.flight_number) { flight in
-                                NavigationLink(destination: FlightDetailView(flight: flight, data: data), label: {FlightCellView(flight: flight)})
+                                NavigationLink(destination: FlightDetailView(flights: flights, flight: flight, data: data), label: {FlightCellView(flight: flight)})
                             }
                         })
                 }
@@ -51,6 +52,6 @@ struct FlightListView: View {
 
 struct FlightListView_Previews: PreviewProvider {
     static var previews: some View {
-        FlightListView(data: DataModel())
+        FlightListView(flights: FlightModel(), data: DataModel())
     }
 }
