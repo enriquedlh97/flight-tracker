@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct AirlinesListView: View {
+    
+    @StateObject var airlines: AirlineModel
+    @StateObject var data: DataModel
+    @State var text = ""
+    
     var body: some View {
         NavigationView {
             VStack {
