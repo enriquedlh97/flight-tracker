@@ -16,11 +16,13 @@ struct MyTripView: View {
             VStack {
                 HStack {
                     
+                    
                     NavigationLink(destination: MyAirportsView(), label: {MyAirportsAirlinesBottonView(label: "Visited Airports")})
                     
                     NavigationLink(destination: MyAirlinesView(), label: {MyAirportsAirlinesBottonView(label: "Marked Airlines")})
             
                 }
+                .padding(.top, 10)
                 Spacer()
                 Text("Hola")
             }

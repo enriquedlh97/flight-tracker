@@ -14,11 +14,11 @@ struct MyAirportsAirlinesBottonView: View {
     var body: some View {
         VStack {
                 Text(label)
-                    .font(.title)
-                    .padding(.horizontal, 40)
+                    .padding(.horizontal, 15)
                     .padding()
         }
         .background(Color("CityLights"))
+        .cornerRadius(10)
     }
 }
 
