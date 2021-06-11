@@ -22,19 +22,19 @@ struct AirlinesListView: View {
                     Section(
                     header: Text("Airlines"),
                         content: {
-                            ForEach(data.airportsList.filter {$0.country_name.contains(text) || $0.iata_code.contains(text) || $0.airport_name.contains(text) || $0.icao_code.contains(text) || $0.geoname_id.contains(text) || text.isEmpty}, id: \.icao_code) { airport in
-                                NavigationLink(destination: AirportDetailView(airports: airports, airport: airport, data: data), label: {AirportCellView(airport: airport)
-                                    .contextMenu {
-                                        Button {
-                                            airports.addData(airport: airport)
-                                        } label: {
-                                            HStack {
-                                                Text("Save as visited")
-                                                Image(systemName: "plus.circle.fill")
-                                            }
-                                        }
-                                    }
-                                })
+                            ForEach(data.airlinesList.filter {$0.airline_name.contains(text) || $0.callsign.contains(text) || $0.country_name.contains(text) || text.isEmpty}, id: \.icao_code) { airline in
+//                                NavigationLink(destination: AirportDetailView(airports: airports, airport: airport, data: data), label: {AirportCellView(airport: airport)
+//                                    .contextMenu {
+//                                        Button {
+//                                            airports.addData(airport: airport)
+//                                        } label: {
+//                                            HStack {
+//                                                Text("Save as visited")
+//                                                Image(systemName: "plus.circle.fill")
+//                                            }
+//                                        }
+//                                    }
+//                                })
                             }
                         })
                 }
