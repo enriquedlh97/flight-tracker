@@ -21,17 +21,17 @@ struct FlightListView: View {
                     Section(
                     header: Text("Live Flights"),
                         content: {
-                            ForEach(data.flightsList.filter {$0.airline_name.contains(text) || $0.aircraft_iata.contains(text) || $0.aircraft_icao.contains(text) || $0.flight_number.contains(text) || $0.departure_airport.contains(text) || text.isEmpty} ?? [Flight.dummy], id: \.flight_number) { flight in
+                            ForEach(data.flightsList.filter {$0.airline_name.contains(text) || $0.aircraft_iata.contains(text) || $0.aircraft_icao.contains(text) || $0.flight_number.contains(text) || $0.departure_airport.contains(text) || $0.aircraft_iata.contains(text) || $0.aircraft_icao.contains(text) || text.isEmpty}, id: \.flight_number) { flight in
                                 NavigationLink(destination: FlightDetailView(flight: flight, data: data), label: {FlightCellView(flight: flight)})
                             }
                         })
                 }
+                .listStyle(DefaultListStyle())
 
 //                List(data.flightsList, id: \.flight_number) { flight in
 //                    NavigationLink(destination: FlightDetailView(flight: flight, data: data), label: {FlightCellView(flight: flight)})
 //                }
             }
-            .listStyle(DefaultListStyle())
             //.padding(.bottom, 20)
             .navigationBarTitle("Flights", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
