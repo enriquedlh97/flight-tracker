@@ -21,39 +21,57 @@ struct MyTripView: View {
                     NavigationLink(destination: MyAirportsView(), label: {MyAirportsAirlinesBottonView(label: "Visited Airports")})
                     
                     NavigationLink(destination: MyAirlinesView(), label: {MyAirportsAirlinesBottonView(label: "Marked Airlines")})
-            
+                    
                 }
                 .padding(.top, 10)
                 Spacer()
                 List {
-                    Section(header: Text("My Next Flights"), content: {})
-                }
-                .listStyle(PlainListStyle())
-                Spacer()
-                NavigationView {
-                    ZStack {
-                        List {
+                    Section(
+                        header: Text("My Next Flights"),
+                        content: {
                             ForEach(flights.flights) { flight in
                                 NavigationLink(
                                     destination: FlightDetailView(flight: flight, data: data),
                                     label: {
-                                    FlightCellView(flight: flight)
-                                        .contextMenu {
-                                            Button {
-                                                flights.removeData(flight: flight)
-                                            } label: {
-                                                HStack {
-                                                    Text("Delete")
-                                                    Image(systemName: "xmark.circle.fill")
+                                        FlightCellView(flight: flight)
+                                            .contextMenu {
+                                                Button {
+                                                    flights.removeData(flight: flight)
+                                                } label: {
+                                                    HStack {
+                                                        Text("Delete")
+                                                        Image(systemName: "xmark.circle.fill")
+                                                    }
                                                 }
                                             }
-                                        }
                                     })
-                                
                             }
-                        }
-                    }
+                        })
                 }
+                .listStyle(PlainListStyle())
+                //                NavigationView {
+                //                    ZStack {
+                //                        List {
+                //                            ForEach(flights.flights) { flight in
+                //                                NavigationLink(
+                //                                    destination: FlightDetailView(flight: flight, data: data),
+                //                                    label: {
+                //                                        FlightCellView(flight: flight)
+                //                                            .contextMenu {
+                //                                                Button {
+                //                                                    flights.removeData(flight: flight)
+                //                                                } label: {
+                //                                                    HStack {
+                //                                                        Text("Delete")
+                //                                                        Image(systemName: "xmark.circle.fill")
+                //                                                    }
+                //                                                }
+                //                                            }
+                //                                    })
+                //                            }
+                //                        }
+                //                    }
+                //                }
             }
             .navigationBarTitle("MyTrip", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
