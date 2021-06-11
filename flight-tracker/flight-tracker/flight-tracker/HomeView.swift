@@ -18,7 +18,7 @@ struct HomeView: View {
                     Image(systemName: "airplane.circle.fill")
                     Text("Flights")
                 }
-            MyTripView()
+            MyTripView(data: data)
                 .tabItem {
                     Image(systemName: "point.fill.topleft.down.curvedto.point.fill.bottomright.up")
                     Text("MyTrip")

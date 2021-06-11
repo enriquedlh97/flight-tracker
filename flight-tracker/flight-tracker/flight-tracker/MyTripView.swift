@@ -10,6 +10,7 @@ import SwiftUI
 struct MyTripView: View {
     
     @ObservedObject var flights = FlightModel()
+    @StateObject var data: DataModel
     
     var body: some View {
         NavigationView {
@@ -29,6 +30,20 @@ struct MyTripView: View {
                 }
                 .listStyle(PlainListStyle())
                 Spacer()
+                NavigationView {
+                    ZStack {
+                        List {
+                            ForEach(flights.flights) { flight in
+                                NavigationLink(
+                                    destination: FlightDetailView(flight: flight, data: data),
+                                    label: {
+                                    FlightCellView(flight: flight)
+                                    })
+                                
+                            }
+                        }
+                    }
+                }
             }
             .navigationBarTitle("MyTrip", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
