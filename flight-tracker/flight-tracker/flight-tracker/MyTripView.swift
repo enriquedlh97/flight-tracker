@@ -38,6 +38,16 @@ struct MyTripView: View {
                                     destination: FlightDetailView(flight: flight, data: data),
                                     label: {
                                     FlightCellView(flight: flight)
+                                        .contextMenu {
+                                            Button {
+                                                flights.removeData(flight: flight)
+                                            } label: {
+                                                HStack {
+                                                    Text("Delete")
+                                                    Image(systemName: "xmark.circle.fill")
+                                                }
+                                            }
+                                        }
                                     })
                                 
                             }
