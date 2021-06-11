@@ -23,7 +23,7 @@ struct AirportsListView: View {
                     header: Text("Airports"),
                         content: {
                             ForEach(data.airportsList.filter {$0.country_name.contains(text) || $0.iata_code.contains(text) || $0.airport_name.contains(text) || $0.icao_code.contains(text) || $0.geoname_id.contains(text) || text.isEmpty}, id: \.icao_code) { airport in
-                                NavigationLink(destination: AirportDetailView(), label: {AirportCellView(airport: airport)
+                                NavigationLink(destination: AirportDetailView(airports: airports, airport: airport, data: data), label: {AirportCellView(airport: airport)
                                     .contextMenu {
                                         Button {
                                             airports.addData(airport: airport)
