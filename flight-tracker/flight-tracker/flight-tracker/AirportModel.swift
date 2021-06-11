@@ -23,14 +23,14 @@ class AirportModel: ObservableObject {
     // Function for getting data from the database
     func fetchData() {
         
-        db.collection("flights").order(by: "departure_scheduled").addSnapshotListener { (querySnapshot, error) in
+        db.collection("airports").order(by: "airport_name").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
             }
             
-            self.flights = documents.compactMap { queryDocumentSnapshot -> Flight? in
-                return try? queryDocumentSnapshot.data(as: Flight.self)
+            self.airports = documents.compactMap { queryDocumentSnapshot -> Airport? in
+                return try? queryDocumentSnapshot.data(as: Airport.self)
                 
             }
             
@@ -39,10 +39,10 @@ class AirportModel: ObservableObject {
     }
     
     // Fucntion for adding data to the database
-    func addData(flight: Flight) {
+    func addData(airport: Airport) {
         
         do {
-            let _ = try db.collection("flights").addDocument(from: flight)
+            let _ = try db.collection("airports").addDocument(from: airport)
         }
         catch {
             print(error)
@@ -51,11 +51,11 @@ class AirportModel: ObservableObject {
     }
     
     // Funciton for updating data from the database
-    func updateData(flight: Flight) {
+    func updateData(airport: Airport) {
         
-        if let flightID = flight.id {
+        if let airportID = airport.id {
             do {
-                try db.collection("flights").document(flightID).setData(from: flight)
+                try db.collection("airports").document(airportID).setData(from: airport)
             }
             catch {
                 print("There was an error while trying to update a flight \(error.localizedDescription).")
@@ -65,10 +65,10 @@ class AirportModel: ObservableObject {
     }
     
     // Function for removing data from the DataBase
-    func removeData(flight: Flight) {
+    func removeData(airport: Airport) {
         
-        if let flightID = flight.id {
-            db.collection("flights").document(flightID).delete { (error) in
+        if let airportID = airport.id {
+            db.collection("flights").document(airportID).delete { (error) in
                 if let error = error {
                     print("Error removing flight: \(error.localizedDescription)")
                 }
