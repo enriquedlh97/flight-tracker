@@ -13,15 +13,12 @@ struct MyAirportsAirlinesBottonView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            ZStack {
                 Text(label)
-                RoundedRectangle(cornerRadius: 40)
-                    .stroke(Color("SourLemon"), style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
-                
-            }
-            Spacer()
+                    .font(.title)
+                    .padding(.horizontal, 40)
+                    .padding()
         }
+        .background(Color("CityLights"))
     }
 }
 
