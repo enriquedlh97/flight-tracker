@@ -35,6 +35,6 @@ struct AirlinesListView: View {
 
 struct AirlinesListView_Previews: PreviewProvider {
     static var previews: some View {
-        AirlinesListView()
+        AirlinesListView(airlines: AirlineModel(), data: DataModel())
     }
 }
