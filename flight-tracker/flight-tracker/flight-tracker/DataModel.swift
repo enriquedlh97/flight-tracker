@@ -32,7 +32,7 @@ class DataModel: ObservableObject {
                 //print(f.1["flight_date"])
                 //print(f.1["arrival"]["airport"])
                 
-                flight = Flight(//id: UUID().uuiString,
+                flight = Flight(id: self.saved(flight_number: f.1["flight"]["number"].stringValue),
                                 aircraft_iata: f.1["aircraft"]["iata"].stringValue,
                                 aircraft_icao: f.1["aircraft"]["icao"].stringValue,
                                 aircraft_icao24: f.1["aircraft"]["icao24"].stringValue,
@@ -72,7 +72,7 @@ class DataModel: ObservableObject {
                                 live_speed_horizontal: f.1["live"]["speed_horizontal"].floatValue,
                                 live_speed_vertical: f.1["live"]["speed_vertical"].floatValue,
                                 live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue) ?? Date(),
-                                saved: false)
+                                saved: self.saved_toggle(flight_number: f.1["flight"]["number"].stringValue))
                 
                 self.flightsList.append(flight)
                 //print("\(flight.airline_iata)-\(flight.flight_number)")
@@ -84,35 +84,35 @@ class DataModel: ObservableObject {
         }
         
     }
-//    
-//    func saved(flight_number: String) -> String {
-//        var return_value = ""
-//        
-//        let saved_document = db.collection("flights").whereField("flight_number", isEqualTo: flight_number).getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//                return_value = UUID().uuidString
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    return_value = document.documentID
-//                }
-//            }
-//        }
-//        return return_value
-//    }
-//    
-//    func saved_toggle(flight_number: String) ->Bool {
-//        var return_value = false
-//        
-//        let saved_document = db.collection("flights").whereField("flight_number", isEqualTo: flight_number).getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    return_value = (document.get(flight_number) != nil)
-//                }
-//            }
-//        }
-//        return return_value
-//    }
+
+    func saved(flight_number: String) -> String {
+        var return_value = ""
+
+        let saved_document = db.collection("flights").whereField("flight_number", isEqualTo: flight_number).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                return_value = UUID().uuidString
+            } else {
+                for document in querySnapshot!.documents {
+                    return_value = document.documentID
+                }
+            }
+        }
+        return return_value
+    }
+
+    func saved_toggle(flight_number: String) ->Bool {
+        var return_value = false
+
+        let saved_document = db.collection("flights").whereField("flight_number", isEqualTo: flight_number).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    return_value = (document.get("saved") != nil)
+                }
+            }
+        }
+        return return_value
+    }
 }
