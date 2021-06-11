@@ -72,7 +72,7 @@ class DataModel: ObservableObject {
                                 live_speed_horizontal: f.1["live"]["speed_horizontal"].floatValue,
                                 live_speed_vertical: f.1["live"]["speed_vertical"].floatValue,
                                 live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue) ?? Date(),
-                                saved: false)
+                                saved: self.saved_toggle(flight_number: f.1["flight"]["number"].stringValue))
                 
                 self.flightsList.append(flight)
                 //print("\(flight.airline_iata)-\(flight.flight_number)")
@@ -95,6 +95,21 @@ class DataModel: ObservableObject {
             } else {
                 for document in querySnapshot!.documents {
                     return_value = document.documentID
+                }
+            }
+        }
+        return return_value
+    }
+    
+    func saved_toggle(flight_number: String) ->Bool {
+        var return_value = false
+        
+        let saved_document = db.collection("flights").whereField("flight_number", isEqualTo: flight_number).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    return_value = (document.get(flight_number) != nil)
                 }
             }
         }
