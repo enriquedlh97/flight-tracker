@@ -10,15 +10,16 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var data = DataModel()
+    @StateObject var flights = FlightModel()
     
     var body: some View {
         TabView {
-            FlightListView(data: data)
+            FlightListView(flights: flights, data: data)
                 .tabItem {
                     Image(systemName: "airplane.circle.fill")
                     Text("Flights")
                 }
-            MyTripView(data: data)
+            MyTripView(flights: flights, data: data)
                 .tabItem {
                     Image(systemName: "point.fill.topleft.down.curvedto.point.fill.bottomright.up")
                     Text("MyTrip")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyTripView: View {
     
-    @ObservedObject var flights = FlightModel()
+    @StateObject var flights: FlightModel
     @StateObject var data: DataModel
     
     var body: some View {
@@ -31,7 +31,7 @@ struct MyTripView: View {
                         content: {
                             ForEach(flights.flights) { flight in
                                 NavigationLink(
-                                    destination: FlightDetailView(flight: flight, data: data),
+                                    destination: FlightDetailView(flights: flights, flight: flight, data: data),
                                     label: {
                                         FlightCellView(flight: flight)
                                             .contextMenu {
@@ -89,6 +89,6 @@ struct MyTripView: View {
 
 struct MyFlightsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyTripView(data: DataModel())
+        MyTripView(flights: FlightModel(), data: DataModel())
     }
 }
