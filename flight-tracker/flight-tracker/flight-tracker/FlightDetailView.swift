@@ -17,14 +17,6 @@ struct FlightDetailView: View {
     var body: some View {
         ZStack {
             VStack {
-                Toggle("Save flight", isOn: $flight.saved)
-                    .onChange(of: flight.saved, perform: { value in
-                        if (value == true) {
-                            flights.addData(flight: flight)
-                        } else {
-                            flights.removeData(flight: flight)
-                        }
-                    })
                 Text("Flight: \(flight.airline_iata)-\(flight.flight_number)")
                 Text("From: \(flight.departure_airport)")
                 Text("To: \(flight.arrival_airport)")
