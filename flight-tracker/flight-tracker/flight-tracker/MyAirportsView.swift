@@ -16,7 +16,7 @@ struct MyAirportsView: View {
         VStack {
             List {
                 Section(
-                    header: Text("My Next Flights"),
+                    header: Text("Airports"),
                     content: {
                         ForEach(airports.airports) { airport in
                             NavigationLink(
