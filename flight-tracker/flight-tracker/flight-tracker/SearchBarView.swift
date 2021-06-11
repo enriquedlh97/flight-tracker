@@ -15,6 +15,7 @@ struct SearchBarView: View {
     var body: some View {
         HStack {
             TextField("Search country", text: $text)
+                .foregroundColor(.black)
                 .padding(15)
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
