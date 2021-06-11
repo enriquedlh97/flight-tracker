@@ -23,18 +23,18 @@ struct AirlinesListView: View {
                     header: Text("Airlines"),
                         content: {
                             ForEach(data.airlinesList.filter {$0.airline_name.contains(text) || $0.callsign.contains(text) || $0.country_name.contains(text) || text.isEmpty}, id: \.icao_code) { airline in
-//                                NavigationLink(destination: AirportDetailView(airports: airports, airport: airport, data: data), label: {AirportCellView(airport: airport)
-//                                    .contextMenu {
-//                                        Button {
-//                                            airports.addData(airport: airport)
-//                                        } label: {
-//                                            HStack {
-//                                                Text("Save as visited")
-//                                                Image(systemName: "plus.circle.fill")
-//                                            }
-//                                        }
-//                                    }
-//                                })
+                                NavigationLink(destination: AirlineDetailView(airlines: airlines, airline: airline, data: data), label: {AirlineCellView(airline: airline)
+                                    .contextMenu {
+                                        Button {
+                                            airlines.addData(airline: airline)
+                                        } label: {
+                                            HStack {
+                                                Text("Save to favorites")
+                                                Image(systemName: "plus.circle.fill")
+                                            }
+                                        }
+                                    }
+                                })
                             }
                         })
                 }
