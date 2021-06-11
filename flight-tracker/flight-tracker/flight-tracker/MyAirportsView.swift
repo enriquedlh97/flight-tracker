@@ -13,7 +13,7 @@ struct MyAirportsView: View {
     }
 }
 
-struct MyAirports_Previews: PreviewProvider {
+struct MyAirportsView_Previews: PreviewProvider {
     static var previews: some View {
         MyAirportsView()
     }
