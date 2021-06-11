@@ -16,7 +16,33 @@ struct AirportsListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Airports")
+                SearchBarView(text: $text)
+                    .padding(.top, 8)
+                List {
+                    Section(
+                    header: Text("Airports"),
+                        content: {
+                            ForEach(data.airportsList.filter {$0.country_name.contains(text) || $0.iata_code.contains(text) || $0.airport_name.contains(text) || $0.icao_code.contains(text) || $0.geoname_id.contains(text) || text.isEmpty}, id: \.icao_code) { airport in
+                                NavigationLink(destination: AirportDetailView(), label: {AirportCellView()
+                                    .contextMenu {
+                                        Button {
+                                            airports.addData(airport: airport)
+                                        } label: {
+                                            HStack {
+                                                Text("Save as visited")
+                                                Image(systemName: "plus.circle.fill")
+                                            }
+                                        }
+                                    }
+                                })
+                            }
+                        })
+                }
+                .listStyle(PlainListStyle())
+
+//                List(data.flightsList, id: \.flight_number) { flight in
+//                    NavigationLink(destination: FlightDetailView(flight: flight, data: data), label: {FlightCellView(flight: flight)})
+//                }
             }
             .navigationBarTitle("Airports", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
