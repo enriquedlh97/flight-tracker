@@ -13,10 +13,12 @@ import FirebaseFirestore
 class DataModel: ObservableObject {
     
     @Published var flightsList = [Flight]()
+    @Published var airportsList = [Airport]()
     private let db = Firestore.firestore()
     
     init() {
         getFlights()
+        getAirports()
     }
     
     func getFlights() {
@@ -80,6 +82,38 @@ class DataModel: ObservableObject {
             //                        self.flightsList.forEach { flight in
             //                            print("\(flight.airline_iata)-\(flight.flight_number)")
             //                        }
+        }
+        
+    }
+    
+    func getAirports() {
+        
+        let URL = "http://api.aviationstack.com/v1/airports?access_key=\(apikey)"
+        
+        AF.request(URL, method: .get, encoding: URLEncoding.default).responseData { data in
+            
+            let json = try! JSON(data: data.data!)
+            var airport: Airport
+            for a in json["data"] {
+                
+                airport = Airport(airport_name: <#T##String#>,
+                                  iata_code: <#T##String#>,
+                                  icao_code: <#T##String#>,
+                                  latitude: <#T##String#>,
+                                  longitude: <#T##String#>,
+                                  geoname_id: <#T##String#>,
+                                  timezone: <#T##String#>,
+                                  gmt: <#T##String#>,
+                                  phone_number: <#T##String?#>,
+                                  country_name: <#T##String#>,
+                                  country_iso2: <#T##String#>,
+                                  city_iata_code: <#T##String#>,
+                                  flag: <#T##String#>)
+                
+                self.airportsList.append(airport)
+                
+            }
+    
         }
         
     }
