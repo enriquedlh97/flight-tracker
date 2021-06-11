@@ -68,7 +68,7 @@ class AirportModel: ObservableObject {
     func removeData(airport: Airport) {
         
         if let airportID = airport.id {
-            db.collection("flights").document(airportID).delete { (error) in
+            db.collection("airports").document(airportID).delete { (error) in
                 if let error = error {
                     print("Error removing flight: \(error.localizedDescription)")
                 }
