@@ -16,11 +16,13 @@ struct MyTripView: View {
             VStack {
                 HStack {
                     
-                    NavigationLink(destination: MyAirportsView(), label: {Text("Visited Airports")})
+                    NavigationLink(destination: MyAirportsView(), label: {MyAirportsAirlinesBottonView(label: "Visited Airports")})
                     
-                    NavigationLink(destination: MyAirlinesView(), label: {Text("Marked Airlines ")})
+                    NavigationLink(destination: MyAirlinesView(), label: {MyAirportsAirlinesBottonView(label: "Marked Airlines")})
             
                 }
+                Spacer()
+                Text("Hola")
             }
             .navigationBarTitle("MyTrip", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
