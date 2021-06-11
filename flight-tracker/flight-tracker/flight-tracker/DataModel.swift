@@ -96,19 +96,19 @@ class DataModel: ObservableObject {
             var airport: Airport
             for a in json["data"] {
                 
-                airport = Airport(airport_name: <#T##String#>,
-                                  iata_code: <#T##String#>,
-                                  icao_code: <#T##String#>,
-                                  latitude: <#T##String#>,
-                                  longitude: <#T##String#>,
-                                  geoname_id: <#T##String#>,
-                                  timezone: <#T##String#>,
-                                  gmt: <#T##String#>,
-                                  phone_number: <#T##String?#>,
-                                  country_name: <#T##String#>,
-                                  country_iso2: <#T##String#>,
-                                  city_iata_code: <#T##String#>,
-                                  flag: <#T##String#>)
+                airport = Airport(airport_name: a.1["airport_name"].stringValue,
+                                  iata_code: a.1["iata_code"].stringValue,
+                                  icao_code: a.1["icao_code"].stringValue,
+                                  latitude: a.1["latitude"].stringValue,
+                                  longitude: a.1["longitude"].stringValue,
+                                  geoname_id: a.1["geoname_id"].stringValue,
+                                  timezone: a.1["timezone"].stringValue,
+                                  gmt: a.1["gmt"].stringValue,
+                                  phone_number: a.1["phone_number"].stringValue,
+                                  country_name: a.1["country_name"].stringValue,
+                                  country_iso2: a.1["country_iso2"].stringValue,
+                                  city_iata_code: a.1["country_iso2"].stringValue,
+                                  flag: "https://disease.sh/assets/img/flags/\(a.1["country_iso2"].stringValue.lowercased()).png")
                 
                 self.airportsList.append(airport)
                 
