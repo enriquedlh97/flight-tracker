@@ -8,10 +8,12 @@
 import SwiftUI
 import Alamofire
 import SwiftyJSON
+import FirebaseFirestore
 
 class DataModel: ObservableObject {
     
     @Published var flightsList = [Flight]()
+    private let db = Firestore.firestore()
     
     init() {
         getFlights()
@@ -81,5 +83,17 @@ class DataModel: ObservableObject {
 //                        }
         }
         
+    }
+    
+    func saved(flight_number: String) -> String {
+        let saved_document = db.collection("flights").whereField("flight_number", isEqualTo: flight_number).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    return document.documentID
+                }
+            }
+        }
     }
 }
