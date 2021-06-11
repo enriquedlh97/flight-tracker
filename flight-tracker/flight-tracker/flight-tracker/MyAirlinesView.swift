@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MyAirlinesView: View {
     var body: some View {
-        NavigationView {
             VStack {
                 Text("Marked Airlines")
             }
@@ -24,7 +23,6 @@ struct MyAirlinesView: View {
                 }
                 
             }
-        }
     }
 }
 
