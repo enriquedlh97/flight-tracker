@@ -49,29 +49,6 @@ struct MyTripView: View {
                         })
                 }
                 .listStyle(PlainListStyle())
-                //                NavigationView {
-                //                    ZStack {
-                //                        List {
-                //                            ForEach(flights.flights) { flight in
-                //                                NavigationLink(
-                //                                    destination: FlightDetailView(flight: flight, data: data),
-                //                                    label: {
-                //                                        FlightCellView(flight: flight)
-                //                                            .contextMenu {
-                //                                                Button {
-                //                                                    flights.removeData(flight: flight)
-                //                                                } label: {
-                //                                                    HStack {
-                //                                                        Text("Delete")
-                //                                                        Image(systemName: "xmark.circle.fill")
-                //                                                    }
-                //                                                }
-                //                                            }
-                //                                    })
-                //                            }
-                //                        }
-                //                    }
-                //                }
             }
             .navigationBarTitle("MyTrip", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))

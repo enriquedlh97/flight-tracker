@@ -9,7 +9,22 @@ import SwiftUI
 
 struct MyAirportsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("Visited Airports")
+            }
+            .navigationBarTitle("Visited Airports", displayMode: .inline)
+            .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
+            .toolbar {
+                // For adding the title
+                ToolbarItem(placement: .principal) {
+                    Text("Visited Airports")
+                        .modifier(Title())
+                        .foregroundColor(Color("SwanWhite"))
+                }
+                
+            }
+        }
     }
 }
 
