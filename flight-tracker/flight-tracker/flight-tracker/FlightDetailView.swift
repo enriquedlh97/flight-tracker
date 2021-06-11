@@ -12,6 +12,7 @@ struct FlightDetailView: View {
     var flight: Flight
     @StateObject var data: DataModel
     
+    
     var body: some View {
         ZStack {
             VStack {

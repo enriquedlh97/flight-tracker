@@ -50,6 +50,7 @@ struct Flight: Identifiable, Codable {
     var live_speed_horizontal: Float // the horizontal speed (in kilometers per hour) of the aircraft at the given time.
     var live_speed_vertical: Float // the vertical speed (in kilometers per hour) of the aircraft at the given time.
     var live_updated: Date // the exact date and time the live data was collected in RFC3339 (ISO8601) format.
+    var saved: Bool // Indicates if the deocument is already in firebase
     
     enum CodingKeys: String, CodingKey {
         
@@ -93,6 +94,7 @@ struct Flight: Identifiable, Codable {
         case live_speed_horizontal
         case live_speed_vertical
         case live_updated
+        case saved
         
     }
     
@@ -101,6 +103,6 @@ struct Flight: Identifiable, Codable {
 extension Flight {
     
     public static var dummy =
-        Flight(aircraft_iata: "A321", aircraft_icao: "A321", aircraft_icao24: "A0F1BB", aircraft_registration: "N160AN", airline_iata: "AA", airline_icao: "AAL", airline_name: "American Airlines", arrival_airport: "Dallas/Fort Worth International", arrival_baggage: "A17", arrival_delay: 0, arrival_estimated: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, arrival_gate: "A22", arrival_iata: "DFW", arrival_icao: "KDFW", arrival_scheduled: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, arrival_terminal: "A", arrival_timezone: "America/Chicago", departure_airport: "San Francisco International", departure_delay: 13, departure_estimated: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, departure_gate: "D11", departure_iata: "SFO", departure_icao: "KSFO", departure_scheduled: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, departure_terminal: "2", departure_timezone: "America/Los_Angeles", flight_date: "2019-12-12", flight_iata: "AA1004", flight_icao: "AAL1004", flight_number: "1004", flight_status: "active", live_altitude: 8846.82, live_direction: 114.34, live_is_ground: false, live_latitude: 36.2856, live_longitude: -106.807, live_speed_horizontal: 894.348, live_speed_vertical: 1.188, live_updated: ISO8601DateFormatter().date(from: "2019-12-12T10:00:00+00:00")!)
+        Flight(aircraft_iata: "A321", aircraft_icao: "A321", aircraft_icao24: "A0F1BB", aircraft_registration: "N160AN", airline_iata: "AA", airline_icao: "AAL", airline_name: "American Airlines", arrival_airport: "Dallas/Fort Worth International", arrival_baggage: "A17", arrival_delay: 0, arrival_estimated: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, arrival_gate: "A22", arrival_iata: "DFW", arrival_icao: "KDFW", arrival_scheduled: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, arrival_terminal: "A", arrival_timezone: "America/Chicago", departure_airport: "San Francisco International", departure_delay: 13, departure_estimated: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, departure_gate: "D11", departure_iata: "SFO", departure_icao: "KSFO", departure_scheduled: ISO8601DateFormatter().date(from: "2019-12-12T04:20:00+00:00")!, departure_terminal: "2", departure_timezone: "America/Los_Angeles", flight_date: "2019-12-12", flight_iata: "AA1004", flight_icao: "AAL1004", flight_number: "1004", flight_status: "active", live_altitude: 8846.82, live_direction: 114.34, live_is_ground: false, live_latitude: 36.2856, live_longitude: -106.807, live_speed_horizontal: 894.348, live_speed_vertical: 1.188, live_updated: ISO8601DateFormatter().date(from: "2019-12-12T10:00:00+00:00")!, saved: false)
     
 }
