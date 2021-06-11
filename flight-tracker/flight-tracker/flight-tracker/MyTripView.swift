@@ -11,6 +11,7 @@ struct MyTripView: View {
     
     @StateObject var flights: FlightModel
     @StateObject var data: DataModel
+    @StateObject var airports: AirportModel
     
     var body: some View {
         NavigationView {
@@ -18,7 +19,7 @@ struct MyTripView: View {
                 HStack {
                     
                     
-                    NavigationLink(destination: MyAirportsView(), label: {MyAirportsAirlinesBottonView(label: "Visited Airports")})
+                    NavigationLink(destination: MyAirportsView(airports: airports, data: data), label: {MyAirportsAirlinesBottonView(label: "Visited Airports")})
                     
                     NavigationLink(destination: MyAirlinesView(), label: {MyAirportsAirlinesBottonView(label: "Marked Airlines")})
                     
@@ -66,6 +67,6 @@ struct MyTripView: View {
 
 struct MyFlightsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyTripView(flights: FlightModel(), data: DataModel())
+        MyTripView(flights: FlightModel(), data: DataModel(), airports: AirportModel())
     }
 }

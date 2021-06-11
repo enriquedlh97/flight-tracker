@@ -16,7 +16,7 @@ struct HomeView: View {
     var body: some View {
         TabView {
     
-            MyTripView(flights: flights, data: data)
+            MyTripView(flights: flights, data: data, airports: airports)
                 .tabItem {
                     Image(systemName: "point.fill.topleft.down.curvedto.point.fill.bottomright.up")
                     Text("MyTrip")
