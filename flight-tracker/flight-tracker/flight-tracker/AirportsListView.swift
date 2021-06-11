@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct AirportsListView: View {
+    
+    @StateObject var airports: AirportModel
+    @StateObject var data: DataModel
+    @State var text = ""
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -30,6 +35,6 @@ struct AirportsListView: View {
 
 struct AirportsListView_Previews: PreviewProvider {
     static var previews: some View {
-        AirportsListView()
+        AirportsListView(airports: AirportModel(), data: DataModel())
     }
 }
