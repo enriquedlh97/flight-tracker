@@ -12,6 +12,7 @@ struct MyTripView: View {
     @StateObject var flights: FlightModel
     @StateObject var data: DataModel
     @StateObject var airports: AirportModel
+    @StateObject var airlines: AirlineModel
     
     var body: some View {
         NavigationView {
@@ -21,7 +22,7 @@ struct MyTripView: View {
                     
                     NavigationLink(destination: MyAirportsView(airports: airports, data: data), label: {MyAirportsAirlinesBottonView(label: "Visited Airports")})
                     
-                    NavigationLink(destination: MyAirlinesView(), label: {MyAirportsAirlinesBottonView(label: "Marked Airlines")})
+                    NavigationLink(destination: MyAirlinesView(airlines: airlines, data: data), label: {MyAirportsAirlinesBottonView(label: "Marked Airlines")})
                     
                 }
                 .padding(.top, 10)
@@ -67,6 +68,6 @@ struct MyTripView: View {
 
 struct MyFlightsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyTripView(flights: FlightModel(), data: DataModel(), airports: AirportModel())
+        MyTripView(flights: FlightModel(), data: DataModel(), airports: AirportModel(), airlines: AirlineModel())
     }
 }
