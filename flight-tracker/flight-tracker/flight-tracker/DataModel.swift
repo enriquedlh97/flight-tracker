@@ -14,11 +14,13 @@ class DataModel: ObservableObject {
     
     @Published var flightsList = [Flight]()
     @Published var airportsList = [Airport]()
+    @Published var airlinesList = [Airline]()
     private let db = Firestore.firestore()
     
     init() {
         getFlights()
         getAirports()
+        getAirlines()
     }
     
     func getFlights() {
@@ -111,6 +113,39 @@ class DataModel: ObservableObject {
                                   flag: "https://disease.sh/assets/img/flags/\(a.1["country_iso2"].stringValue.lowercased()).png")
                 
                 self.airportsList.append(airport)
+                
+            }
+    
+        }
+        
+    }
+    
+    func getAirlines() {
+        
+        let URL = "http://api.aviationstack.com/v1/airlines?access_key=\(apikey)"
+        
+        AF.request(URL, method: .get, encoding: URLEncoding.default).responseData { data in
+            
+            let json = try! JSON(data: data.data!)
+            var airline: Airline
+            for a in json["data"] {
+                
+                airline = Airline(airline_name: a.1["airline_name"].stringValue,
+                                  iata_code: a.1["iata_code"].stringValue,
+                                  iata_prefix_accounting: a.1["iata_prefix_accounting"].stringValue,
+                                  icao_code: a.1["icao_code"].stringValue,
+                                  callsign: a.1["callsign"].stringValue,
+                                  type: a.1["type"].stringValue,
+                                  status: a.1["status"].stringValue,
+                                  fleet_size: a.1["fleet_size"].stringValue,
+                                  fleet_average_age: a.1["fleet_average_age"].stringValue,
+                                  date_founded: a.1["date_founded"].stringValue,
+                                  hub_code: a.1["hub_code"].stringValue,
+                                  country_name: a.1["country_name"].stringValue,
+                                  country_iso2: a.1["country_iso2"].stringValue,
+                                  flag: "https://disease.sh/assets/img/flags/\(a.1["country_iso2"].stringValue.lowercased()).png")
+                
+                self.airlinesList.append(airline)
                 
             }
     
