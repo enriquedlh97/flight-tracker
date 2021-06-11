@@ -24,7 +24,11 @@ struct MyTripView: View {
                 }
                 .padding(.top, 10)
                 Spacer()
-                Text("Hola")
+                List {
+                    Section(header: Text("My Next Flights"), content: {})
+                }
+                .listStyle(PlainListStyle())
+                Spacer()
             }
             .navigationBarTitle("MyTrip", displayMode: .inline)
             .navigationBarColor(UIColor(named: "ElectronBlue"), UIColor(named: "SwanWhite"))
