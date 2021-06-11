@@ -71,6 +71,6 @@ struct MyTripView: View {
 
 struct MyFlightsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyTripView()
+        MyTripView(data: DataModel())
     }
 }
