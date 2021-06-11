@@ -9,13 +9,17 @@ import SwiftUI
 
 struct FlightDetailView: View {
     
-    var flight: Flight
+    @StateObject var flights: FlightModel
+    @State var flight: Flight
     @StateObject var data: DataModel
     
     
     var body: some View {
         ZStack {
             VStack {
+                Toggle(isOn: $flight.saved) {
+                    Text("Save flight")
+                }
                 Text("Flight: \(flight.airline_iata)-\(flight.flight_number)")
                 Text("From: \(flight.departure_airport)")
                 Text("To: \(flight.arrival_airport)")
@@ -38,6 +42,6 @@ struct FlightDetailView: View {
 
 struct FlightDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FlightDetailView(flight: Flight.dummy, data: DataModel())
+        FlightDetailView(flights: FlightModel(), flight: Flight.dummy, data: DataModel())
     }
 }

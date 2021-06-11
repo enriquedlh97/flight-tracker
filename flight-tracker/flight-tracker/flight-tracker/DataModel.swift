@@ -69,7 +69,8 @@ class DataModel: ObservableObject {
                                 live_longitude: f.1["live"]["longitude"].floatValue,
                                 live_speed_horizontal: f.1["live"]["speed_horizontal"].floatValue,
                                 live_speed_vertical: f.1["live"]["speed_vertical"].floatValue,
-                                live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue) ?? Date())
+                                live_updated: ISO8601DateFormatter().date(from: f.1["live"]["updated"].stringValue) ?? Date(),
+                                saved: false)
                 
                 self.flightsList.append(flight)
                 //print("\(flight.airline_iata)-\(flight.flight_number)")
