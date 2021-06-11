@@ -14,16 +14,31 @@ struct HomeView: View {
     
     var body: some View {
         TabView {
-            FlightListView(flights: flights, data: data)
-                .tabItem {
-                    Image(systemName: "airplane.circle.fill")
-                    Text("Flights")
-                }
+    
             MyTripView(flights: flights, data: data)
                 .tabItem {
                     Image(systemName: "point.fill.topleft.down.curvedto.point.fill.bottomright.up")
                     Text("MyTrip")
                 }
+            
+            FlightListView(flights: flights, data: data)
+                .tabItem {
+                    Image(systemName: "airplane.circle.fill")
+                    Text("Flights")
+                }
+            
+            AirlinesListView()
+                .tabItem {
+                    Image(systemName: "network")
+                    Text("Airlines")
+                }
+            
+            AirportsListView()
+                .tabItem {
+                    Image(systemName: "building.2.crop.circle.fill")
+                    Text("Airports")
+                }
+            
         }
         .accentColor(Color("Alizarin"))
         .onAppear {
