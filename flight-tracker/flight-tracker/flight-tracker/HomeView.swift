@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @StateObject var data = DataModel()
     @StateObject var flights = FlightModel()
+    @StateObject var airports = AirportModel()
     
     var body: some View {
         TabView {
@@ -33,7 +34,7 @@ struct HomeView: View {
                     Text("Airlines")
                 }
             
-            AirportsListView()
+            AirportsListView(airports: airports, data: data)
                 .tabItem {
                     Image(systemName: "building.2.crop.circle.fill")
                     Text("Airports")
