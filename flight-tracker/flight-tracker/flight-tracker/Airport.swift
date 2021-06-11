@@ -7,10 +7,11 @@
 
 import  SwiftUI
 import Foundation
+import FirebaseFirestoreSwift
 
-struct Airport: Identifiable {
+struct Airport: Identifiable, Codable {
     
-    var id = UUID() // Lets swift assign and id automatically
+    @DocumentID var id: String? // Uses firebase to generate an id autoamtically
     var airport_name: String // the full name of the airport.
     var iata_code: String // the IATA code associated with the airport.
     var icao_code: String // the ICAO code associated with the airport.
@@ -23,13 +24,33 @@ struct Airport: Identifiable {
     var country_name: String // the name of the country the airport is in.
     var country_iso2: String // the ISO code of the country the airport is in.
     var city_iata_code: String // the IATA code of the city the airport is in.
+    var flag: String // url to the flag of the country where th airport is located
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case id
+        case airport_name
+        case iata_code
+        case icao_code
+        case latitude
+        case longitude
+        case geoname_id
+        case timezone
+        case gmt
+        case phone_number
+        case country_name
+        case country_iso2
+        case city_iata_code
+        case flag
+        
+    }
     
 }
 
 extension Airport {
     
     public static var dummy = [
-        Airport(airport_name: "Anaa", iata_code: "AAA", icao_code: "NTGA", latitude: "-17.05", longitude: "-145.41667", geoname_id: "6947726", timezone: "Pacific/Tahiti", gmt: "-10", phone_number: nil, country_name: "French Polynesia", country_iso2: "PF", city_iata_code: "AAA")
+        Airport(airport_name: "Anaa", iata_code: "AAA", icao_code: "NTGA", latitude: "-17.05", longitude: "-145.41667", geoname_id: "6947726", timezone: "Pacific/Tahiti", gmt: "-10", phone_number: nil, country_name: "French Polynesia", country_iso2: "PF", city_iata_code: "AAA", flag: "https://disease.sh/assets/img/flags/pf.png")
     ]
     
 }
