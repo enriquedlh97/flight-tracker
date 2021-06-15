@@ -1,5 +1,17 @@
 # flight-tracker
-Simple Swift mobile app for tracking flights and more. 
+Simple Swift mobile app for tracking live flights, airlines, airports and more. 
+
+<p align="center">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/1.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/2.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/3.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/4.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/5.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/6.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/8.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/9.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/11.jpeg" width="150">
+  <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/12.jpeg" width="150">
 
 ## Dependencies
 
