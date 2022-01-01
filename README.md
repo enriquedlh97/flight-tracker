@@ -1,5 +1,5 @@
 # flight-tracker
-Simple Swift mobile app for tracking live flights, airlines, airports and more
+Simple Swift mobile app for tracking live flights, airlines, airports and more.
 
 <p align="center">
   <img src="https://github.com/enriquedlh97/flight-tracker/blob/main/screenshots/1.jpeg" width="150">
